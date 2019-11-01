@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="antd-admin" height="64" src="./_media/favicon.ico">
+  <img alt="antd-admin" height="64" src="./docs/_media/favicon.ico">
   <h1 align="center">Antd Dva React</h1>
 </div>
 
