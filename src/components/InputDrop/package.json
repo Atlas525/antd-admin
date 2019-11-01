@@ -1,0 +1,4 @@
+{
+  "main": "./InputDrop.jsx",
+  "description": "带下来框的 Input 组件，支持上下键盘选择"
+}

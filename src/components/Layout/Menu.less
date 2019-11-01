@@ -1,0 +1,41 @@
+@import '~themes/vars.less';
+
+.cj-menu-item-selected {
+  background-color: rgba(17, 120, 253, 1);
+  border-radius: 4px;
+  color: #fff;
+  padding-left: 9px;
+  margin-left: -9px;
+}
+
+.cjMenu {
+  background-color: @sider-bgcolor;
+}
+
+:global {
+  // .ant-menu-inline-collapsed [收起]
+  .ant-menu:not(.ant-menu-inline-collapsed) {
+    // 一级自菜单
+    .ant-menu-item-selected {
+      background-color: transparent;
+      > a {
+        .cj-menu-item-selected;
+        color: #fff;
+      }
+      > a:hover {
+        color: #fff;
+      }
+    }
+
+    // 嵌套子菜单
+    .ant-menu-item.ant-menu-item-selected::after {
+      display: none; // 右侧边线
+    }
+    .ant-menu-submenu > .ant-menu {
+      background-color: transparent;
+    }
+  }
+  .menusBox {
+    overflow: hidden;
+  }
+}

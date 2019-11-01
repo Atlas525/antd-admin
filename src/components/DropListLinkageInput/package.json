@@ -1,0 +1,7 @@
+{
+  "main": "./DropListLinkageInput.jsx",
+  "description": "集成input输入、搜索的联动选择组件",
+  "dependencies": {
+    "DropListLinkage": "link:./DropListLinkage"
+  }
+}

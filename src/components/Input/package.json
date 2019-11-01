@@ -1,0 +1,4 @@
+{
+  "main": "./Input.jsx",
+  "description": "公共Input组件"
+}

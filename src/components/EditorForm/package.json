@@ -1,0 +1,7 @@
+{
+  "name": "EditorFrom",
+  "version": "0.0.1",
+  "private": true,
+  "main": "EditorForm.js",
+  "description": "Form 嵌入式 Editor，支持 initialValue、validator"
+}

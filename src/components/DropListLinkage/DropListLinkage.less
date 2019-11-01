@@ -1,0 +1,175 @@
+@radius-medium: 4px;
+@shadow-1: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
+@shadow-2: 4px 4px 40px 0 rgba(0, 0, 0, 0.05);
+@box-shadow-dropdown: 0 2px 8px rgba(0, 0, 0, 0.15);
+@transition-fast: 150ms;
+@transition-medium: 300ms;
+@transition-slow: 450ms;
+@radius-small: 2px;
+@radius-medium: 4px;
+@color-hover: #ecf5ff;
+@hover-color: #f9f9fc;
+@color-click: #1178fd;
+@color-input-focus: #1178fd;
+
+.radius-medium {
+  border-radius: @radius-medium;
+}
+.box-shadow-2 {
+  box-shadow: @shadow-2;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.after-expand (@tb: 5, @lr: 5) {
+  content: '';
+  position: absolute;
+  top: ~'-@{tb}px';
+  right: ~'-@{lr}px';
+  bottom: ~'-@{tb}px';
+  left: ~'-@{lr}px';
+}
+.box-shadow-dropdown {
+  box-shadow: @box-shadow-dropdown;
+}
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.dropWrap {
+  position: relative;
+}
+
+.dropBox {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: calc(100% + 8px);
+  z-index: 99;
+}
+
+.searchWrap {
+  display: flex;
+}
+
+.btnGroup {
+  padding: 8px 16px;
+  display: flex;
+  .radius-medium;
+  .box-shadow-2;
+}
+
+.btnItem {
+  display: flex;
+  max-width: 299px;
+}
+
+.btnDelete {
+  position: relative;
+  font-size: 20px;
+  .cursor-pointer;
+  &:after {
+    .after-expand(5, 10);
+  }
+}
+
+.selectBtn {
+  position: relative;
+  padding: 0 14px;
+  line-height: 32px;
+  .cursor-pointer;
+  &:after {
+    .after-expand(10, 0);
+  }
+}
+
+.btnIcon {
+  margin-left: 10px;
+}
+
+.selectItem {
+  width: 160px;
+  background-color: #fff;
+  .radius-medium;
+  .box-shadow-dropdown;
+  user-select: none;
+}
+
+.marginRight8px {
+  margin-right: 8px;
+}
+
+.marginLeft16px {
+  margin-left: 16px;
+}
+
+.conditionMinWidth {
+  min-width: 194px;
+}
+
+.conditionDate2 {
+  width: 224px;
+}
+
+.listHeader {
+  background-color: rgba(250, 250, 250, 1);
+  .text-truncate;
+  .withPadding;
+}
+
+.listItem {
+  margin: 4px 8px;
+  .withPadding;
+  .cursor-pointer;
+  .text-truncate;
+  .radius-medium;
+  &:hover {
+    .listItemActive;
+  }
+}
+
+.withPadding {
+  padding: 10px 16px;
+}
+
+.listItemActive {
+  background-color: @color-hover;
+}
+
+.animateOpen {
+  transform-origin: top;
+  animation: open @transition-medium cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.animateClose {
+  transform-origin: top;
+  animation: close @transition-medium cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes open {
+  0% {
+    opacity: 0.04;
+    transform: scaleY(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0.04;
+    transform: scaleY(0.9);
+  }
+}

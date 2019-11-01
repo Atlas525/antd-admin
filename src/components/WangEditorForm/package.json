@@ -1,0 +1,4 @@
+{
+  "main": "./WangEditor.js",
+  "description": "WangEditor 嵌入form component"
+}

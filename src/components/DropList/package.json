@@ -1,0 +1,4 @@
+{
+  "main": "./DropList.jsx",
+  "description": "下来列表，主要配合Input、Select、Lable等一些组件的下拉列表，也可以单独使用"
+}

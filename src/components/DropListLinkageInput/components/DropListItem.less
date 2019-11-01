@@ -1,0 +1,15 @@
+@import '~themes/index.less';
+
+._dropListItem {
+  .cursor-pointer;
+  .text-truncate;
+  .radius-medium;
+  padding: 10px 16px;
+  &:hover {
+    .dropListItemActive;
+  }
+}
+
+.dropListItemActive {
+  background-color: @color-hover;
+}

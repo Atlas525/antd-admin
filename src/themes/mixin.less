@@ -1,0 +1,104 @@
+@import '~themes/default';
+
+@dark-half: #494949;
+@purple: #d897eb;
+@shadow-1: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
+@shadow-2: 4px 4px 40px 0 rgba(0, 0, 0, 0.05);
+@shadow-3: 4px 4px 4px 0 rgba(0, 0, 0, 0.05);
+@box-shadow-dropdown: 0 2px 8px rgba(0, 0, 0, 0.15);
+@transition-ease-in: all 0.3s ease-out;
+@transition-ease-out: all 0.3s ease-out;
+@ease-in: ease-in;
+
+@sider-bgcolor: #e8eef6;
+@shadow-header: 9px -5px 9px 0 rgba(17, 120, 253, 1);
+@transition-fast: 150ms;
+@transition-medium: 300ms;
+@transition-slow: 450ms;
+@radius-small: 2px;
+@radius-medium: 4px;
+@color-hover: #ecf5ff;
+@color-click: #1178fd;
+@color-input-focus: #1178fd;
+
+.text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.text-gradient {
+  background-image: -webkit-gradient(
+    linear,
+    37.219838% 34.532506%,
+    36.425669% 93.178216%,
+    from(#29cdff),
+    to(#0a60ff),
+    color-stop(0.37, #148eff)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background-hover {
+  transition: @transition-ease-in;
+  &:hover {
+    background-color: @hover-color;
+  }
+}
+
+.transition-fast {
+  transition: @transition-fast;
+}
+.transition-medium {
+  transition: @transition-medium;
+}
+.transition-slow {
+  transition: @transition-slow;
+}
+.bg-white {
+  background-color: #fff;
+}
+.box-shadow-1 {
+  box-shadow: @shadow-1;
+}
+.box-shadow-2 {
+  box-shadow: @shadow-2;
+}
+.box-shadow-dropdown {
+  box-shadow: @box-shadow-dropdown;
+}
+.radius-small {
+  border-radius: @radius-small;
+}
+.radius-medium {
+  border-radius: @radius-medium;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.area-expand (@tb: 5, @lr: 5) {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: ~'-@{tb}px';
+    right: ~'-@{lr}px';
+    bottom: ~'-@{tb}px';
+    left: ~'-@{lr}px';
+  }
+}
+
+.after-expand (@tb: 5, @lr: 5) {
+  content: '';
+  position: absolute;
+  top: ~'-@{tb}px';
+  right: ~'-@{lr}px';
+  bottom: ~'-@{tb}px';
+  left: ~'-@{lr}px';
+}

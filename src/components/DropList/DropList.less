@@ -1,0 +1,72 @@
+@import '~themes/index.less';
+
+.displayNone {
+  display: none;
+}
+
+.dropBox {
+  .box-shadow-2;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.dropList {
+  padding: 9px;
+  .radius-medium;
+}
+
+.dropListItemHeader {
+  background-color: rgba(250, 250, 250, 1);
+}
+
+.dropListItem {
+  .cursor-pointer;
+  .text-truncate;
+  &:hover {
+    .dropListItemActive;
+  }
+}
+
+.dropListItemActive {
+  background-color: @color-hover;
+}
+
+.withPadding {
+  padding: 10px 16px;
+}
+
+.animateOpen {
+  animation: dropAnimateOpen @transition-fast;
+  transform-origin: top;
+}
+
+.animateClose {
+  animation: dropAnimateClose @transition-fast;
+  transform-origin: top;
+}
+
+@keyframes dropAnimateOpen {
+  0% {
+    opacity: 0.04;
+    //transform: rotateX(-19deg);
+    transform: scale(1, 0.9);
+  }
+  100% {
+    opacity: 1;
+    //transform: rotateX(0);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dropAnimateClose {
+  0% {
+    opacity: 1;
+    //transform: rotateX(0);
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0.04;
+    //transform: rotateX(-19deg);
+    transform: scale(1, 0.9);
+  }
+}

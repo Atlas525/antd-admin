@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "api/*": ["./src/services/*"],
+      "components/*": ["./src/components/*"],
+      "config/*": ["./src/utils/config/*"],
+      "models/*": ["./src/models/*"],
+      "routes/*": ["./src/routes/*"],
+      "services/*": ["./src/services/*"],
+      "themes/*": ["./src/themes/*"],
+      "utils/*": ["./src/utils/*"]
+    }
+  }
+}

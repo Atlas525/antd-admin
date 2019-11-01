@@ -1,0 +1,43 @@
+@import '~themes/index.less';
+
+.drop-list-item-active {
+  .radius-medium;
+  .cursor-pointer;
+  background-color: @color-hover;
+}
+
+.inputDrop {
+  position: relative;
+  //overflow: hidden;
+}
+.dropList {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 9px;
+  top: (32px + 0); // antd input height 32px
+  background-color: #fff;
+  .box-shadow-2;
+  .radius-medium;
+  //bottom: 0;
+  //transform: translate3d(0, -100%, 0);
+  //opacity: 0;
+  .transition-medium;
+  :global {
+    .drop-list-item {
+      padding: 10px 16px;
+      &:hover {
+        .drop-list-item-active;
+      }
+    }
+  }
+}
+
+.dropListShow {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.dropListActive {
+  .drop-list-item-active;
+}
