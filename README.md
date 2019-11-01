@@ -1,6 +1,6 @@
 <div align="center">
-  <img alt="antd-admin" height="64" src="./docs/icon-1024.png">
-  <h1 align="center">CJ 祖传代码[前端]</h1>
+  <img alt="antd-admin" height="64" src="./_media/favicon.ico">
+  <h1 align="center">Antd Dva React</h1>
 </div>
 
 ## 架构
